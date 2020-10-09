@@ -1,0 +1,13 @@
+<nav>
+    <h1>TTS</h1>
+    <div class="hamburger-container" (click)="drawer.toggle()">
+        <app-hamburger class="hamburger"></app-hamburger>
+    </div>
+
+</nav>
+
+<mat-drawer-container class="drawer-container">
+    <mat-drawer #drawer mode="cover" class="drawer" position="end">
+        <h1>test</h1>
+    </mat-drawer>
+</mat-drawer-container>

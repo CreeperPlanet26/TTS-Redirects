@@ -1,0 +1,42 @@
+@import '../../../styles.scss';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: red;
+    height: 80px;
+    width: 100vw;
+
+    h1 {
+        font-size: 40px;
+        margin: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .hamburger-container {
+        cursor: pointer;
+    }
+
+    .hamburger {
+        margin: 40px;
+    }
+}
+
+.drawer-container {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    background: none;
+}
+
+.drawer {
+    background: $bg-alt;
+    display: flex;
+    height: 100vh;
+    width: 60vw;
+    text-decoration: none;
+}
+
+
