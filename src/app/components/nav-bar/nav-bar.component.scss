@@ -1,29 +1,5 @@
 @import "../../../scss/variables";
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
-    width: 100vw;
-
-    .h1 {
-        margin: 1rem 2rem;
-        height: 3rem;
-    }
-}
-
-#hamburger {
-    margin: 1rem;
-    margin-top: 1.5rem;
-}
-
-.mat-drawer-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: $bg;
-}
-
 .mat-drawer-content {
     position: absolute;
     z-index: -1;
@@ -66,15 +42,4 @@ a {
 
 #nav-login {
     margin: 3rem 0.7rem;
-}
-
-h1 {
-    margin: 4rem 2rem 2rem;
-    font-weight: $extra-bold !important;
-    font-size: 2rem !important;
-}
-
-p,
-app-login {
-    margin: 2rem;
 }

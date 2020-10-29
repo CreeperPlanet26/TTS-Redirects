@@ -1,25 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@angular/material/theming";
+@import "./scss/reset";
 
-$bg: #161826;
-$bg-alt: #191C2C;
-
-$primary: #E64648;
-$secondary: #E94D3D;
-
-html, body { 
-    height: 100%; 
-}
-
-body { 
-    background: $bg;
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans";
-    color: white;
-}
- 
-a {
-    text-decoration: none;
-}
-
+$custom-typography: mat-typography-config(
+    $font-family: "Open Sans",
+);
+@include mat-core($custom-typography);

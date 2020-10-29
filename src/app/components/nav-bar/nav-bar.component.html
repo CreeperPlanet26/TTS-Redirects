@@ -1,8 +1,13 @@
-<!-- <mat-drawer-container> -->
-
-<!-- <mat-drawer #drawer mode="side" position="end">
+<button (click)="drawer.open()" id="close" mat-button>
+    <app-close></app-close>
+</button>
+<mat-drawer-container>
+    <button (click)="drawer.close()" id="close" mat-button>
+        <app-close></app-close>
+    </button>
+    <mat-drawer #drawer mode="side" position="end">
         <section>
-            <button (click)="drawer.toggle()" id="close" mat-button>
+            <button (click)="drawer.close()" id="close" mat-button>
                 <app-close></app-close>
             </button>
         </section>
@@ -14,14 +19,14 @@
             <app-login id="nav-login"></app-login>
 
         </ul>
-    </mat-drawer> -->
-<app-nav-bar #navBar></app-nav-bar>
-<!-- <button (click)="navBar.drawerf.toggle()">f</button> -->
-<!-- <mat-drawer-content>
+    </mat-drawer>
+
+    <mat-drawer-content>
+
         <nav>
             <button routerLink="/" class="h1" mat-button>TTS</button>
 
-            <button (click)="navBar.open()" id="hamburger" mat-button>
+            <button (click)="drawer.open()" id="hamburger" mat-button>
                 <app-hamburger></app-hamburger>
             </button>
         </nav>
@@ -30,6 +35,5 @@
             new members like you! </p>
 
         <app-login></app-login>
-    </mat-drawer-content> -->
-
-<!-- </mat-drawer-container> -->
+    </mat-drawer-content>
+    <mat-drawer-container>
