@@ -25,7 +25,7 @@ nav {
     }
 }
 
-#hamburger {
+.hamburger {
     margin: 1rem;
     margin-top: 1.5rem;
 
@@ -114,25 +114,83 @@ a {
     }
 }
 
-img {
-    z-index: -1;
-    position: absolute;
+section {
+    height: 40vh;
+}
+
+section img {
+    z-index: -4;
+    position: relative;
     width: 18rem;
     align-self: flex-end;
-    transform: translateY(2vh);
+    transform: translateY(-20vh);
 
     @include tablet {
         width: 20rem;
-        transform: translateX(55vw);
+        transform: translateX(-17vw);
     }
 
     @include laptop {
         width: 30rem;
-        transform: translateY(20vh) translateX(50vw);
+        transform: translateX(20vw);
     }
 
     @include desktop {
         width: 35rem;
-        transform: translateY(30vh) translateX(50vw);
+        transform: translateX(15vw);
+    }
+}
+
+article {
+    &:first-of-type {
+        background: $bg-alt;
+    }
+
+    background: $bg;
+
+    &:last-of-type {
+        background: $bg-alt;
+    }
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 37rem;
+
+    .split {
+        display: flex;
+
+        @include laptop() {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    img {
+        width: 18rem;
+        margin: 2rem;
+        margin-bottom: 0;
+
+        @include tablet {
+            margin-left: 3rem;
+        }
+
+        @include desktop {
+            margin-left: 5rem;
+        }
+    }
+
+    h1 {
+        margin-top: 2.5rem;
+        margin-bottom: 0;
+    }
+}
+
+.discord {
+    img {
+        width: 20rem;
     }
 }
