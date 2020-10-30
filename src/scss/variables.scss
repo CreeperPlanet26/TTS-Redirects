@@ -14,7 +14,7 @@ $bold: 700;
 $extra-bold: 800;
 
 @mixin tablet {
-    @media (min-width: 800px) {
+    @media (min-width: 700px) {
         @content;
     }
 }
@@ -26,7 +26,7 @@ $extra-bold: 800;
 }
 
 @mixin desktop {
-    @media (min-width: 1600px) {
+    @media (min-width: 1500px) {
         @content;
     }
 }

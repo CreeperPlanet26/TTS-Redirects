@@ -103,13 +103,36 @@ section {
 a {
     @include tablet {
         display: inline-block;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: $semi-bold;
         color: $nav-text;
-        margin: 0 1rem;
+        margin: 0 0.5rem;
     }
 
     @include desktop {
         font-size: 1.5rem;
+    }
+}
+
+img {
+    z-index: -1;
+    position: absolute;
+    width: 18rem;
+    align-self: flex-end;
+    transform: translateY(2vh);
+
+    @include tablet {
+        width: 20rem;
+        transform: translateX(55vw);
+    }
+
+    @include laptop {
+        width: 30rem;
+        transform: translateY(20vh) translateX(50vw);
+    }
+
+    @include desktop {
+        width: 35rem;
+        transform: translateY(30vh) translateX(50vw);
     }
 }
