@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavBarService } from 'src/app/components/nav-bar/nav-bar.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  constructor() { }
+
+  constructor(private navBarService: NavBarService) { }
+
+  public toggleDrawer(): void {
+    this.navBarService.drawer.toggle();
+  }
 }

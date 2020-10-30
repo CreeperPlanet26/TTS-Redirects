@@ -1,5 +1,17 @@
 @import "../../../scss/variables";
 
+.mat-drawer-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg;
+}
+
+.mat-drawer {
+    padding: 20px;
+    height: 100%;
+    width: 65%;
+    background: $bg-alt;
+}
 .mat-drawer-content {
     position: absolute;
     z-index: -1;
@@ -14,13 +26,6 @@ section {
 
 #close {
     margin-left: 12rem;
-}
-
-.mat-drawer {
-    padding: 20px;
-    height: 100%;
-    width: 65%;
-    background: $bg-alt;
 }
 
 ul {

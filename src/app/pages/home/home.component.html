@@ -1,35 +1,15 @@
-<!-- <mat-drawer-container> -->
+<app-nav-bar>
+    <nav>
+        <button routerLink="/" class="h1" mat-button>TTS</button>
 
-<!-- <mat-drawer #drawer mode="side" position="end">
-        <section>
-            <button (click)="drawer.toggle()" id="close" mat-button>
-                <app-close></app-close>
-            </button>
-        </section>
-        <ul>
-            <a routerLink="/dashboard" mat-button>Dashboard</a>
-            <a routerLink="/bugs" mat-button>Bugs</a>
-            <a routerLink="/news" mat-button>News </a>
-            <a routerLink="/patch-notes" mat-button>Patch Notes</a>
-            <app-login id="nav-login"></app-login>
+        <button (click)="toggleDrawer()" id="hamburger" mat-button>
+            <app-hamburger></app-hamburger>
+        </button>
+    </nav>
+    <h1>The Tomatohead Society</h1>
+    <p>The Tomatohead Society (TTS) is a Fortnite clan that
+        strongly supports Team Pizza and is always looking
+        for new members like you!</p>
 
-        </ul>
-    </mat-drawer> -->
-<app-nav-bar #navBar></app-nav-bar>
-<!-- <button (click)="navBar.drawerf.toggle()">f</button> -->
-<!-- <mat-drawer-content>
-        <nav>
-            <button routerLink="/" class="h1" mat-button>TTS</button>
-
-            <button (click)="navBar.open()" id="hamburger" mat-button>
-                <app-hamburger></app-hamburger>
-            </button>
-        </nav>
-        <h1>The Tomatohead Society</h1>
-        <p>The Tomatohead Society (TTS) is a Fortnite clan that strongly supports Team Pizza and is always looking for
-            new members like you! </p>
-
-        <app-login></app-login>
-    </mat-drawer-content> -->
-
-<!-- </mat-drawer-container> -->
+    <app-login></app-login>
+</app-nav-bar>
