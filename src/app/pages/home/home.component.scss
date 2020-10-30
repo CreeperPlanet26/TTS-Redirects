@@ -24,7 +24,17 @@ h1 {
     font-size: 2rem !important;
 }
 
-p,
-app-login {
+p {
     margin: 2rem;
+}
+
+app-login,
+app-join {
+    margin: 1rem 2rem;
+}
+
+section {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
