@@ -45,7 +45,7 @@ body {
 /* Set the core h1 defaults */
 h1,
 .h1 {
-  font-size: 40px !important;
+  font-size: 2.5rem !important;
   font-weight: $bold !important;
   color: white;
 }
@@ -85,9 +85,8 @@ ol {
   @include mat-button();
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  text-decoration: none;
 }
 
 /* Make images easier to work with */

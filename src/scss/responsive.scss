@@ -1,0 +1,11 @@
+@import "variables";
+
+html {
+    @include tablet {
+        font-size: 18px;
+    }
+
+    @include desktop {
+        font-size: 26px;
+    }
+}

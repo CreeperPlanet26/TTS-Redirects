@@ -1,7 +1,9 @@
 <app-nav-bar>
     <nav>
         <button routerLink="/" class="h1" mat-button>TTS</button>
-
+        <div class="links">
+            <a *ngFor="let link of links" [routerLink]="link.path" mat-button>{{ link.name }}</a>
+        </div>
         <button (click)="toggleDrawer()" id="hamburger" mat-button>
             <app-hamburger></app-hamburger>
         </button>

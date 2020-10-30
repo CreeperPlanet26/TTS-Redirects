@@ -7,34 +7,109 @@ nav {
     height: 5rem;
     width: 100vw;
 
+    @include tablet {
+        margin-top: 1rem;
+    }
+
     .h1 {
         margin: 1rem 2rem;
         height: 3rem;
+
+        @include tablet {
+            margin-left: 3rem;
+        }
+
+        @include desktop {
+            margin-left: 5rem;
+        }
     }
 }
 
 #hamburger {
     margin: 1rem;
     margin-top: 1.5rem;
+
+    @include tablet {
+        display: none;
+    }
 }
 
 h1 {
     margin: 4rem 2rem 2rem;
     font-weight: $extra-bold !important;
     font-size: 2rem !important;
+
+    @include tablet {
+        margin-left: 3rem;
+    }
+
+    @include desktop {
+        margin-left: 5rem;
+    }
 }
 
 p {
     margin: 2rem;
+    max-width: 28rem;
+
+    @include tablet {
+        margin-left: 3rem;
+    }
+
+    @include desktop {
+        margin-left: 5rem;
+    }
 }
 
 app-login,
 app-join {
     margin: 1rem 2rem;
+    @include tablet {
+        margin-left: 0;
+    }
+}
+
+app-login {
+    @include tablet {
+        margin-left: 3rem;
+    }
+
+    @include desktop {
+        margin-left: 5rem;
+    }
 }
 
 section {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+    }
+}
+
+.links {
+    display: none;
+
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 40rem;
+    }
+}
+
+a {
+    @include tablet {
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: $semi-bold;
+        color: $nav-text;
+        margin: 0 1rem;
+    }
+
+    @include desktop {
+        font-size: 1.5rem;
+    }
 }

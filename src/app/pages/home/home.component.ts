@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavBarService } from 'src/app/components/nav-bar/nav-bar.service';
+import { navLinks } from 'src/app/components/nav-bar/nav-links';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,7 @@ import { NavBarService } from 'src/app/components/nav-bar/nav-bar.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  public links = navLinks;
 
   constructor(private navBarService: NavBarService) { }
 

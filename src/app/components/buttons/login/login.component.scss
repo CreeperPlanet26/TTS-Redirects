@@ -5,9 +5,18 @@
     font-size: 1.5rem;
     padding: 0.7rem 2.5rem;
     background: $primary;
-    border-radius: 1.2rem;
+    border-radius: 1rem;
 
     &:hover {
         background: lighten($primary, 2%);
+    }
+
+    @include tablet {
+        border-radius: 0.8rem;
+        padding: 0.8rem 2.5rem;
+    }
+
+    @include desktop {
+        padding: 1rem 2.5rem;
     }
 }
