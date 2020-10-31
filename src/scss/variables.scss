@@ -24,9 +24,3 @@ $extra-bold: 800;
         @content;
     }
 }
-
-@mixin desktop {
-    @media (min-width: 1500px) {
-        @content;
-    }
-}

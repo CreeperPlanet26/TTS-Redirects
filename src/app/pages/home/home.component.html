@@ -8,17 +8,23 @@
             <app-hamburger></app-hamburger>
         </button>
     </nav>
-    <h1 class="main">The Tomatohead Society</h1>
-    <p>The Tomatohead Society (TTS) is a Fortnite clan that
-        strongly supports Team Pizza and is always looking
-        for new members like you!</p>
 
-    <section>
-        <app-login></app-login>
-        <app-join></app-join>
-        <img src="../../../assets/tomatohead.png" alt="A picture of tomatohead.">
-    </section>
+    <div class="grid">
+        <div class="left">
+            <h1 class="main">The Tomatohead Society</h1>
+            <p>The Tomatohead Society (TTS) is a Fortnite clan that
+                strongly supports Team Pizza and is always looking
+                for new members like you!</p>
 
+            <section>
+                <app-login></app-login>
+                <app-join></app-join>
+            </section>
+        </div>
+        <img class="tomatohead" src="../../../assets/tomatohead.png" alt="A picture of tomatohead.">
+    </div>
+
+    <!-- 
     <article class="team-pizza">
         <img src="../../../assets/pizza.svg" alt="A picture of a pizza.">
         <div class="split">
@@ -50,6 +56,6 @@
                 Bibendum magna morbi facilisis tellus diam amet. Enim
                 magna.</p>
         </div>
-    </article>
+    </article> -->
 
 </app-nav-bar>

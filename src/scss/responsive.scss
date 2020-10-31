@@ -8,8 +8,4 @@ html {
     @include laptop {
         font-size: 17px;
     }
-
-    @include desktop {
-        font-size: 26px;
-    }
 }
