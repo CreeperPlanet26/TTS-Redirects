@@ -154,7 +154,15 @@ article {
 
     &:last-of-type {
         background: $bg-alt;
-        grid-template-areas: "image text";
+        display: flex;
+
+        @include large-phone {
+            text-align: center;
+        }
+
+        app-journey {
+            margin-left: 2rem;
+        }
     }
 }
 

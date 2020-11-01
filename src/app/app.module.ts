@@ -13,6 +13,7 @@ import { JoinComponent } from './components/buttons/join/join.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { NavBarService } from './components/nav-bar/nav-bar.service';
 import { CommonModule } from '@angular/common';
+import { JourneyComponent } from './components/buttons/journey/journey.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CommonModule } from '@angular/common';
     CloseComponent,
     LoginComponent,
     JoinComponent,
-    NavBarComponent
+    NavBarComponent,
+    JourneyComponent
   ],
   imports: [
     CommonModule,
