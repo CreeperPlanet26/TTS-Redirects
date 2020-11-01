@@ -51,21 +51,23 @@ nav {
     }
 
     img {
-        display: none;
         grid-area: img;
-        width: 20rem;
-        min-width: 10rem;
+        display: block;
+        position: relative;
+
+        right: 16rem;
+        bottom: -5rem;
+        max-width: 16rem;
 
         @include large-phone {
-            display: block;
-            width: 40rem;
-            min-width: 20rem;
-            position: relative;
-            right: 20rem;
+            bottom: 0;
+            right: 17rem;
+            max-width: 17rem;
         }
 
         @include tablet {
             position: static;
+            max-width: 100%;
         }
     }
 }

@@ -14,7 +14,7 @@ $bold: 700;
 $extra-bold: 800;
 
 @mixin large-phone {
-    @media (min-width: 400px) {
+    @media (min-width: 425px) {
         @content;
     }
 }
