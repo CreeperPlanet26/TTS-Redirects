@@ -32,31 +32,40 @@ nav {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 2fr 0;
     grid-template-rows: 1fr 1fr 2fr;
     grid-template-areas:
-        "left left ."
-        "left . ."
-        "left right right";
+        "text ."
+        "text ."
+        "text img";
 
     @include tablet {
         grid-template-columns: 2fr 1.5fr;
-        grid-template-rows: 0;
-        grid-template-areas: "left right";
+        grid-template-rows: 1fr;
+        grid-template-areas: "text img";
+        display: grid;
     }
 
-    .left {
-        grid-area: left;
+    .text {
+        grid-area: text;
     }
 
     img {
-        grid-area: right;
-        width: 30rem;
-        min-width: 15rem;
+        display: none;
+        grid-area: img;
+        width: 20rem;
+        min-width: 10rem;
+
+        @include large-phone {
+            display: block;
+            width: 40rem;
+            min-width: 20rem;
+            position: relative;
+            right: 20rem;
+        }
 
         @include tablet {
-            min-width: 20rem;
-            width: 70rem;
+            position: static;
         }
     }
 }
@@ -79,6 +88,7 @@ p {
 
     @include tablet {
         margin-left: 3rem;
+        max-width: 28rem;
     }
 }
 
@@ -145,19 +155,10 @@ article {
 
 article {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 1rem;
     min-height: 37rem;
-
-    .split {
-        display: flex;
-
-        @include laptop() {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-    }
 
     img {
         width: 18rem;

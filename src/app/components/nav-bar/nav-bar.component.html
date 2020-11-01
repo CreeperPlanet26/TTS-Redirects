@@ -6,7 +6,7 @@
             </button>
         </section>
         <ul>
-            <a *ngFor="let link of links;" [routerLink]="link.name" mat-button>{{ link.name }}</a>
+            <a *ngFor="let link of links;" [routerLink]="link.path" mat-button>{{ link.name }}</a>
             <app-login id="nav-login"></app-login>
         </ul>
     </mat-drawer>

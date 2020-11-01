@@ -13,6 +13,12 @@ $semi-bold: 600;
 $bold: 700;
 $extra-bold: 800;
 
+@mixin large-phone {
+    @media (min-width: 400px) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (min-width: 700px) {
         @content;
