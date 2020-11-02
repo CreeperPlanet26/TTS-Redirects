@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { footerLinks } from './footer-links';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,8 @@ import { Component, Input } from '@angular/core';
 export class FooterComponent {
   @Input()
   public color: 'bg' | 'bg-alt';
+
+  public links = footerLinks;
 
   constructor() { }
 }

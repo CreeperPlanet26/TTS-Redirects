@@ -1,9 +1,11 @@
-<footer>
+<footer [class]="color">
     <h4>© 2020 TTS. All rights reserved.</h4>
+
     <section class="icons">
-        <img src="assets/icons/discord.svg">
-        <img src="assets/icons/twitter.svg">
-        <img src="assets/icons/github.svg">
+        <a *ngFor="let link of links" [href]="link.url" mat-button>
+            <img [src]="link.svgPath">
+        </a>
     </section>
-    <h4>Made with ♥ by TTS Mods.</h4>
+
+    <h4>Made with 💖 by TTS Mods.</h4>
 </footer>

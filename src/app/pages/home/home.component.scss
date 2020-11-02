@@ -175,11 +175,13 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 5rem 1rem;
+    padding-right: 2.5rem;
     min-height: 37rem;
 
     @include tablet {
         padding: 2rem 4rem;
+        padding-bottom: 5rem;
     }
 
     @include laptop {
@@ -188,6 +190,7 @@ article {
         grid-template-rows: 1fr;
         place-items: center;
         padding: 10% 10%;
+        padding-bottom: 5rem;
         gap: 1rem;
     }
 
