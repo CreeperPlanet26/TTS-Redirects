@@ -5,7 +5,7 @@ import { navLinks } from 'src/app/components/nav-bar/nav-links';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss', './animation.scss']
 })
 export class HomeComponent {
   public links = navLinks;
