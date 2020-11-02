@@ -14,6 +14,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { NavBarService } from './components/nav-bar/nav-bar.service';
 import { CommonModule } from '@angular/common';
 import { JourneyComponent } from './components/buttons/journey/journey.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { JourneyComponent } from './components/buttons/journey/journey.component
     LoginComponent,
     JoinComponent,
     NavBarComponent,
-    JourneyComponent
+    JourneyComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
