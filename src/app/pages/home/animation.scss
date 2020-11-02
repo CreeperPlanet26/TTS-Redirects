@@ -1,12 +1,32 @@
-h1 {
-    animation: fade-in forwards 2s;
+.grid {
+    animation: five forwards 2s;
 }
 
-p {
-    animation: p forwards 2s;
+article:first-of-type > * {
+    animation: five forwards 3s;
 }
 
-@keyframes fade-in {
+article > * {
+    animation: ten forwards 4s;
+}
+
+article:last-of-type > * {
+    animation: twenty forwards 6s;
+}
+
+@keyframes forty {
+    from {
+        opacity: 0;
+        transform: translateY(-40%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes twenty {
     from {
         opacity: 0;
         transform: translateY(-20%);
@@ -18,10 +38,22 @@ p {
     }
 }
 
-@keyframes p {
+@keyframes ten {
     from {
         opacity: 0;
         transform: translateY(-10%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes five {
+    from {
+        opacity: 0;
+        transform: translateY(-5%);
     }
 
     to {
