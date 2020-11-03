@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 import { NavBarService } from 'src/app/components/nav-bar/nav-bar.service';
-import { navLinks } from 'src/app/components/nav-bar/nav-links';
-
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss', './animation.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
-export class HomeComponent {
-  public links = navLinks;
+export class DashboardComponent {
 
   constructor(private navBarService: NavBarService) { }
 
@@ -18,5 +15,3 @@ export class HomeComponent {
   }
 
 }
-
-

@@ -2,18 +2,6 @@
     animation: five forwards 2s;
 }
 
-article:first-of-type > * {
-    animation: five forwards 3s;
-}
-
-article > * {
-    animation: ten forwards 4s;
-}
-
-article:last-of-type > * {
-    animation: twenty forwards 6s;
-}
-
 @keyframes forty {
     from {
         opacity: 0;

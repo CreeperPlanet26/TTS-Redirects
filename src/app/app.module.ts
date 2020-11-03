@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +15,11 @@ import { NavBarService } from './components/nav-bar/nav-bar.service';
 import { CommonModule } from '@angular/common';
 import { JourneyComponent } from './components/buttons/journey/journey.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DashboardComponent as DashboardIconComponent } from './assets/icons/dashboard/dashboard.component';
+import { BugsComponent } from './assets/icons/bugs/bugs.component';
+import { NewsComponent } from './assets/icons/news/news.component';
+import { PatchNotesComponent } from './assets/icons/patch-notes/patch-notes.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,12 @@ import { FooterComponent } from './components/footer/footer.component';
     JoinComponent,
     NavBarComponent,
     JourneyComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
+    DashboardIconComponent,
+    BugsComponent,
+    NewsComponent,
+    PatchNotesComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +44,6 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AnimateOnScrollModule.forRoot(),
   ],
   providers: [NavBarService],
   bootstrap: [AppComponent]

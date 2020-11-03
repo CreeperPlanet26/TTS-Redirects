@@ -6,7 +6,18 @@
             </button>
         </section>
         <ul>
-            <a *ngFor="let link of links;" [routerLink]="link.path" mat-button>{{ link.name }}</a>
+            <div *ngFor="let link of links" class="links" [ngClass]="getClass(link.name)">
+                <section class="link">
+                    <a [routerLink]="link.path" routerLinkActive="active" mat-button>
+                        <app-dashboard-icon *ngIf="link.svg === 'app-dashboard'" class="svg"></app-dashboard-icon>
+                        <app-bugs *ngIf="link.svg === 'app-bugs'" class="svg"></app-bugs>
+                        <app-news *ngIf="link.svg === 'app-news'" class="svg"></app-news>
+                        <app-patch-notes *ngIf="link.svg === 'app-patch-notes'" class="svg"></app-patch-notes>
+                        {{ link.name }}
+                    </a>
+                </section>
+            </div>
+
             <app-login id="nav-login"></app-login>
         </ul>
     </mat-drawer>
