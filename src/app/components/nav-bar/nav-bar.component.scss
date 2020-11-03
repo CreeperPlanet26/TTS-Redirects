@@ -9,12 +9,13 @@
 .mat-drawer {
     padding: 20px;
     height: 100%;
-    width: 65%;
+    width: 75%;
     background: $bg-alt;
+    z-index: 69;
 }
 .mat-drawer-content {
     position: absolute;
-    z-index: -1;
+    z-index: -69;
 }
 
 section {
