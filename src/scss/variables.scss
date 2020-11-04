@@ -16,6 +16,18 @@ $semi-bold: 600;
 $bold: 700;
 $extra-bold: 800;
 
+@mixin small-phone {
+    @media (min-width: 200px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (min-width: 360px) {
+        @content;
+    }
+}
+
 @mixin large-phone {
     @media (min-width: 425px) {
         @content;
