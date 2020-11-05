@@ -29,7 +29,7 @@ $extra-bold: 800;
 }
 
 @mixin large-phone {
-    @media (min-width: 425px) {
+    @media (min-width: 400px) {
         @content;
     }
 }
