@@ -1,0 +1,29 @@
+@import "../../../../scss/variables";
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    width: 100vw;
+
+    @include tablet {
+        display: none;
+    }
+
+    .h1 {
+        margin: 1rem 2rem;
+        height: 3rem;
+    }
+}
+
+.hamburger {
+    margin: 1rem;
+    margin-top: 1.5rem;
+}
+
+app-footer {
+    @include tablet {
+        display: none;
+    }
+}

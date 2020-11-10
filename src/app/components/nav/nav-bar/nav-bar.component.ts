@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { NavBarService } from './nav-bar.service';
-import { navLinks, NavLink } from './nav-links';
+import { navLinks } from './nav-links';
 
 @Component({
   selector: 'app-nav-bar',

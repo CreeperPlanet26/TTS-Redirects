@@ -1,0 +1,12 @@
+<app-nav-bar>
+    <nav>
+        <button routerLink="/" class="h1" mat-button>TTS</button>
+        <button (click)="toggleDrawer()" class="hamburger" mat-button>
+            <app-hamburger></app-hamburger>
+        </button>
+    </nav>
+
+    <ng-content></ng-content>
+
+    <app-footer color="bg-alt"></app-footer>
+</app-nav-bar>

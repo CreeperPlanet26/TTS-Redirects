@@ -10,8 +10,8 @@ import { MaterialModule } from './material.module';
 import { CloseComponent } from './assets/icons/close/close.component';
 import { LoginComponent } from './components/buttons/login/login.component';
 import { JoinComponent } from './components/buttons/join/join.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { NavBarService } from './components/nav-bar/nav-bar.service';
+import { NavBarComponent } from './components/nav/nav-bar/nav-bar.component';
+import { NavBarService } from './components/nav/nav-bar/nav-bar.service';
 import { CommonModule } from '@angular/common';
 import { JourneyComponent } from './components/buttons/journey/journey.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -20,6 +20,7 @@ import { BugsComponent } from './assets/icons/bugs/bugs.component';
 import { NewsComponent } from './assets/icons/news/news.component';
 import { PatchNotesComponent } from './assets/icons/patch-notes/patch-notes.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DashboardNavComponent } from './components/nav/dashboard-nav/dashboard-nav.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     DashboardIconComponent,
     BugsComponent,
     NewsComponent,
-    PatchNotesComponent
+    PatchNotesComponent,
+    DashboardNavComponent
   ],
   imports: [
     CommonModule,
