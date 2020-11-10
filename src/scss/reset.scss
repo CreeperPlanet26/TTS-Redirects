@@ -109,20 +109,27 @@ select {
 }
 
 /* Custom scrollbar */
-
 ::-webkit-scrollbar-track {
   border-radius: 0.7rem;
-  background-color: lighten($bg-alt, 2%);
+  background: lighten($bg-alt, 2%);
 }
 
 ::-webkit-scrollbar {
   width: 0.8rem;
-  background-color: lighten($bg-alt, 2%);
+  background: lighten($bg-alt, 2%);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 0.7rem;
-  background-color: $footer-text;
+  background: $footer-text;
+
+  &:hover {
+    background: lighten($footer-text, 3%);
+  }
+}
+
+::-webkit-scrollbar-corner {
+  background: lighten($bg-alt, 2%);
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
