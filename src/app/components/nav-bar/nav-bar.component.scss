@@ -1,21 +1,23 @@
 @import "../../../scss/variables";
 
-.mat-drawer-container {
-    width: 100vw;
-    height: 100vh;
+.mat-sidenav-container {
     background: $bg;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-.mat-drawer {
+.mat-sidenav {
+    height: 100vh;
     padding: 20px;
-    height: 100%;
     width: 75%;
     background: $bg-alt;
-    z-index: 69;
+    overflow: hidden !important;
 }
-.mat-drawer-content {
-    position: absolute;
-    z-index: -69;
+.mat-sidenav-content {
+    overflow-x: hidden;
 }
 
 section {

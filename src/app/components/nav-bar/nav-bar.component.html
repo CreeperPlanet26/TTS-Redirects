@@ -1,5 +1,5 @@
-<mat-drawer-container>
-    <mat-drawer #drawer mode="side" position="end">
+<mat-sidenav-container>
+    <mat-sidenav #drawer mode="over" position="end">
         <section>
             <button (click)="drawer.toggle()" id="close" mat-button>
                 <app-close></app-close>
@@ -20,10 +20,9 @@
 
             <app-login id="nav-login"></app-login>
         </ul>
-    </mat-drawer>
+    </mat-sidenav>
 
-    <mat-drawer-content>
+    <mat-sidenav-content>
         <ng-content></ng-content>
-    </mat-drawer-content>
-
-</mat-drawer-container>
+    </mat-sidenav-content>
+</mat-sidenav-container>
