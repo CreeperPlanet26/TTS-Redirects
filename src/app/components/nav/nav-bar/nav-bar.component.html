@@ -6,7 +6,7 @@
             </button>
         </section>
         <ul>
-            <div *ngFor="let link of links" class="links" [ngClass]="getClass(link.name)">
+            <div *ngFor="let link of navBarService.links" class="links" [ngClass]="navBarService.getClass(link.name)">
                 <section class="link">
                     <a [routerLink]="link.path" routerLinkActive="active" mat-button>
                         <app-dashboard-icon *ngIf="link.svg === 'app-dashboard'" class="svg"></app-dashboard-icon>

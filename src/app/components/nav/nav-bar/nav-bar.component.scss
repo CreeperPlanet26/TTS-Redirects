@@ -86,11 +86,12 @@ a {
         margin-right: 0.4rem;
     }
 
-    .link {
-        border-radius: 1rem;
-        border: 0.2rem solid $active;
-        padding-bottom: 0.4rem;
-        padding-right: 0.5rem;
-        height: 3.1rem;
-    }
+    border-radius: 1rem;
+    border: 0.2rem solid $active;
+    // padding-bottom: 0.4rem;
+    // padding-right: 0.5rem;
+    // height: 3.1rem;
+    padding-bottom: 0.4rem;
+    padding-right: 0.5rem;
+    height: 3.1rem;
 }

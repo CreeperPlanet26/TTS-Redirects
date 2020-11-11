@@ -22,8 +22,101 @@ nav {
     margin-top: 1.5rem;
 }
 
+section {
+    display: flex;
+    justify-content: flex-start;
+}
+
 app-footer {
     @include tablet {
         display: none;
     }
+}
+
+.side-nav {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15rem;
+    background: $card;
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+
+    @include tablet {
+        display: block;
+    }
+
+    head {
+        display: flex;
+        margin-top: 1.5rem;
+
+        img {
+            width: 45%;
+        }
+
+        .h1 {
+            height: 3rem;
+            margin-top: 2.5rem;
+            margin-left: -1rem;
+        }
+    }
+}
+
+.links {
+    margin-top: 2rem;
+}
+
+.link {
+    margin-bottom: 1.5rem;
+}
+
+.links,
+.link {
+    display: flex;
+    // align-items: center;
+    width: 90%;
+    flex-direction: column;
+}
+
+.link {
+    .svg {
+        margin-right: 0.4rem;
+        width: 35px;
+        height: 35px;
+        &,
+        path {
+            fill: $footer-text;
+        }
+    }
+}
+
+a {
+    font-size: 1.5rem;
+    font-weight: $bold;
+    color: $nav-text;
+    text-align: left;
+    width: 13.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    margin-left: 0.5rem;
+}
+
+.active {
+    color: $active;
+
+    .svg,
+    .svg path {
+        fill: $active !important;
+        margin-right: 0.4rem;
+    }
+
+    border-radius: 1rem;
+    border: 0.2rem solid $active;
+    height: 2.5rem;
+    padding-bottom: 2.7rem;
+    max-width: 14rem;
+    padding-right: 5rem;
 }

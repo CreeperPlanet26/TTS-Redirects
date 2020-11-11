@@ -80,6 +80,10 @@ ol {
 
 .mat-button:hover {
   @include mat-button();
+
+  &.on-card {
+    background: lighten(#191b2b, 6%);
+  }
 }
 
 .mat-icon-button:hover {
