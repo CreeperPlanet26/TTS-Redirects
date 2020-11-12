@@ -70,7 +70,7 @@ a {
     text-align: left;
     margin: 1rem 0;
     padding: 0 0.4rem;
-    height: 2rem;
+    height: 2.5rem;
 }
 
 #nav-login {
@@ -88,10 +88,8 @@ a {
 
     border-radius: 1rem;
     border: 0.2rem solid $active;
-    // padding-bottom: 0.4rem;
-    // padding-right: 0.5rem;
-    // height: 3.1rem;
-    padding-bottom: 0.4rem;
-    padding-right: 0.5rem;
-    height: 3.1rem;
+    height: 4rem;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
