@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavBarService } from 'src/app/components/nav/nav-bar/nav-bar.service';
+import { NavService } from 'src/app/components/nav/nav.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +8,7 @@ import { NavBarService } from 'src/app/components/nav/nav-bar/nav-bar.service';
 })
 export class DashboardComponent {
 
-  constructor(private navBarService: NavBarService) { }
+  constructor(private navBarService: NavService) { }
 
   public toggleDrawer(): void {
     this.navBarService.drawer.toggle();

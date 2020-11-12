@@ -15,9 +15,8 @@
             </head>
 
             <section class="links">
-                <div *ngFor="let link of navBarService.links" class="link"
-                    [ngClass]="navBarService.getClass(link.name)">
-                    <a [routerLink]="link.path" class="on-card" routerLinkActive="active" mat-button>
+                <div *ngFor="let link of navBarService.links" class="link">
+                    <a [routerLink]="link.path" routerLinkActive="active" class="on-card" mat-button>
                         <app-dashboard-icon *ngIf="link.svg === 'app-dashboard'" class="svg"></app-dashboard-icon>
                         <app-bugs *ngIf="link.svg === 'app-bugs'" class="svg"></app-bugs>
                         <app-news *ngIf="link.svg === 'app-news'" class="svg"></app-news>

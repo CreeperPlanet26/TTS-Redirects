@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
-import { NavBarService } from './nav-bar.service';
+import { NavService } from '../nav.service';
 import { navLinks } from '../nav-links';
 
 @Component({
@@ -13,8 +13,8 @@ export class NavBarComponent implements AfterViewInit {
   @ViewChild('drawer')
   private drawerRef: MatDrawer;
 
-  constructor(public navBarService: NavBarService) {
-    navBarService.setClass();
+  constructor(public navBarService: NavService) {
+    // navBarService.setClass();
   }
 
   public async ngAfterViewInit(): Promise<void> {

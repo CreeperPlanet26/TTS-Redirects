@@ -11,7 +11,7 @@ import { CloseComponent } from './assets/icons/close/close.component';
 import { LoginComponent } from './components/buttons/login/login.component';
 import { JoinComponent } from './components/buttons/join/join.component';
 import { NavBarComponent } from './components/nav/nav-bar/nav-bar.component';
-import { NavBarService } from './components/nav/nav-bar/nav-bar.service';
+import { NavService } from './components/nav/nav.service';
 import { CommonModule } from '@angular/common';
 import { JourneyComponent } from './components/buttons/journey/journey.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -47,7 +47,7 @@ import { DashboardNavComponent } from './components/nav/dashboard-nav/dashboard-
     BrowserAnimationsModule,
     MaterialModule,
   ],
-  providers: [NavBarService],
+  providers: [NavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

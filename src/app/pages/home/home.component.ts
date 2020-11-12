@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavBarService } from 'src/app/components/nav/nav-bar/nav-bar.service';
+import { NavService } from 'src/app/components/nav/nav.service';
 import { navLinks } from 'src/app/components/nav/nav-links';
 
 
@@ -11,7 +11,7 @@ import { navLinks } from 'src/app/components/nav/nav-links';
 export class HomeComponent {
   public links = navLinks;
 
-  constructor(private navBarService: NavBarService) { }
+  constructor(private navBarService: NavService) { }
 
   public toggleDrawer(): void {
     this.navBarService.drawer.toggle();
