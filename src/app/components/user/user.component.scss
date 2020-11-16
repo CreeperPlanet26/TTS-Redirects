@@ -33,20 +33,10 @@ h4 {
 }
 
 img {
-    width: 100%;
+    min-width: 3rem;
     border-radius: 50%;
     grid-area: image;
     margin-left: -0.7rem;
-}
 
-.detail {
-    position: absolute;
-    z-index: 69;
-    width: 15rem;
-    height: 13rem;
-    margin: -14.5rem auto 0 auto;
-    background: $bg-alt;
-    border: 1px solid $border;
-    border-radius: 1.8rem;
-    box-shadow: 3px 10px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 1rem;
 }

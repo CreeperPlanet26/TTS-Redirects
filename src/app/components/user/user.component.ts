@@ -4,7 +4,7 @@ import { AnimationService } from 'src/app/util/animation/animation.service';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss', './user.animation.scss']
+  styleUrls: ['./user.component.scss', './user.animation.scss', './user.detail.scss']
 })
 export class UserComponent {
 

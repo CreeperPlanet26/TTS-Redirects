@@ -1,0 +1,27 @@
+@import "../../../scss/variables";
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 69;
+    width: 15rem;
+    height: 13rem;
+    margin: -14.5rem auto 0 auto;
+    background: $bg-alt;
+    border: 1px solid $border;
+    border-radius: 1.8rem;
+    box-shadow: 3px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.on-bg-alt {
+    margin: 1rem 0.3rem 0 auto;
+}
+
+.roles {
+    margin: auto;
+}
+
+app-logout {
+    margin: auto;
+}

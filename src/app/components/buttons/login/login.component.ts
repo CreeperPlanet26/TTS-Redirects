@@ -8,7 +8,4 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginComponent {
   public link = environment.httpEndpoints.LOGIN;
-
-  constructor() { }
-
 }

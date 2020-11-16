@@ -23,6 +23,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DashboardNavComponent } from './components/nav/dashboard-nav/dashboard-nav.component';
 import { UserComponent } from './components/user/user.component';
 import { AnimationService } from './util/animation/animation.service';
+import { LogoutComponent } from './components/buttons/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AnimationService } from './util/animation/animation.service';
     NewsComponent,
     PatchNotesComponent,
     DashboardNavComponent,
-    UserComponent
+    UserComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,
