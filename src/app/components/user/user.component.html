@@ -1,0 +1,14 @@
+<div *ngIf="showDetail" class="detail" [ngClass]="classes">
+    <button (click)="toggle()" mat-button class="on-bg-alt">
+        <app-close></app-close>
+    </button>
+
+</div>
+
+<button (click)="toggle()" mat-button class="toggle on-card">
+    <div class="user">
+        <img src="https://cdn.discordapp.com/avatars/539928835953524757/fa626df27e371d63c56ee3f4ad809e4c.png?size=2048">
+        <h2>Mysterious_Penguin</h2>
+        <h4>Mysterious_Penguin#4071</h4>
+    </div>
+</button>

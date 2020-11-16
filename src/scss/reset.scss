@@ -84,6 +84,10 @@ ol {
   &.on-card {
     background: lighten(#191b2b, 6%);
   }
+
+  &.on-bg-alt {
+    background: lighten($bg-alt, 2%);
+  }
 }
 
 .mat-icon-button:hover {
@@ -113,28 +117,36 @@ select {
   font: inherit;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar for laptop and bigger. */
 ::-webkit-scrollbar-track {
-  border-radius: 0.7rem;
-  background: lighten($bg-alt, 2%);
+  @include laptop {
+    border-radius: 0.7rem;
+    background: lighten($bg-alt, 2%);
+  }
 }
 
 ::-webkit-scrollbar {
-  width: 0.8rem;
-  background: lighten($bg-alt, 2%);
+  @include laptop {
+    width: 0.8rem;
+    background: lighten($bg-alt, 2%);
+  }
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 0.7rem;
-  background: $footer-text;
+  @include laptop {
+    border-radius: 0.7rem;
+    background: $footer-text;
 
-  &:hover {
-    background: lighten($footer-text, 3%);
+    &:hover {
+      background: lighten($footer-text, 3%);
+    }
   }
 }
 
 ::-webkit-scrollbar-corner {
-  background: lighten($bg-alt, 2%);
+  @include laptop {
+    background: lighten($bg-alt, 2%);
+  }
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */

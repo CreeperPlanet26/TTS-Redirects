@@ -14,10 +14,14 @@ html {
     }
 
     @include tablet {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     @include laptop {
-        font-size: 17px;
+        font-size: 16px;
     }
+
+    // @include desktop {
+    //     font-size: 17px;
+    // }
 }

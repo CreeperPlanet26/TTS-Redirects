@@ -44,11 +44,15 @@ app-footer {
     overflow: auto;
 
     @include tablet {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     &::-webkit-scrollbar {
-        width: 0.3rem;
+        @include laptop {
+            height: 1rem;
+            width: 0.3rem;
+        }
     }
 
     head {
@@ -68,7 +72,6 @@ app-footer {
 }
 
 .links {
-    position: absolute;
     margin-top: 2rem;
 }
 
@@ -85,7 +88,7 @@ app-footer {
 
 .link {
     .svg {
-        margin-right: 0.4rem;
+        margin-right: 0.5rem;
         width: 35px;
         height: 35px;
         &,
@@ -96,7 +99,7 @@ app-footer {
 }
 
 a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: $bold;
     color: $nav-text;
     text-align: left;
@@ -123,30 +126,9 @@ a {
     padding-right: 2rem;
 }
 
-.user {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    display: grid;
-    grid-template-areas:
-        "image text"
-        "image text";
-    margin-top: 25rem;
-    margin-left: 1rem;
-
-    h2 {
-        font-size: 1.2rem;
-        grid-area: text;
-    }
-
-    h4 {
-        font-size: 0.8rem;
-        color: $footer-text;
-        grid-area: text;
-    }
-
-    img {
-        border-radius: 50%;
-        grid-area: image;
-    }
+app-user {
+    margin-left: 0.3em;
+    margin-right: 0.7rem;
+    margin-top: auto;
+    margin-bottom: 2.5rem;
 }

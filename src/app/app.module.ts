@@ -21,6 +21,8 @@ import { NewsComponent } from './assets/icons/news/news.component';
 import { PatchNotesComponent } from './assets/icons/patch-notes/patch-notes.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DashboardNavComponent } from './components/nav/dashboard-nav/dashboard-nav.component';
+import { UserComponent } from './components/user/user.component';
+import { AnimationService } from './util/animation/animation.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { DashboardNavComponent } from './components/nav/dashboard-nav/dashboard-
     BugsComponent,
     NewsComponent,
     PatchNotesComponent,
-    DashboardNavComponent
+    DashboardNavComponent,
+    UserComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +50,7 @@ import { DashboardNavComponent } from './components/nav/dashboard-nav/dashboard-
     BrowserAnimationsModule,
     MaterialModule,
   ],
-  providers: [NavService],
+  providers: [NavService, AnimationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
