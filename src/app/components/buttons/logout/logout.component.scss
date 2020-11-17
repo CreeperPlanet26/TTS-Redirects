@@ -3,22 +3,22 @@
 .mat-raised-button {
     font-weight: $bold;
     font-size: 1.4rem;
-    padding: 0.5rem 2rem;
+    padding: 0.3rem 2.5rem;
     background: $primary;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
 
     &:hover {
         background: lighten($primary, 2%);
     }
 
     @include phone {
-        padding: 0.5rem 2rem;
-        border-radius: 1rem;
+        padding: 0.3rem 2.5rem;
+        border-radius: 0.3rem;
     }
 
     @include tablet {
-        padding: 0.4rem 2.5rem;
-        border-radius: 0.5rem;
+        padding: 0.4rem 3rem;
+        border-radius: 0.4rem;
     }
 }
 

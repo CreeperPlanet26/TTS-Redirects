@@ -16,5 +16,4 @@ export class UserComponent {
   public toggle(): void {
     this.animation.run('remove');
   }
-
 }
