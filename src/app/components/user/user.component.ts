@@ -36,7 +36,7 @@ export class UserComponent {
 
   private setRoles(): void {
     for (const r of this.response)
-      r.color = this.getRgbString(r.color);
+      r.color = this.getRgbString(<number>r.color);
   }
 
 
@@ -44,7 +44,7 @@ export class UserComponent {
    * Takes an RBG Integer 16744987 and returns an RBG String rgb(255, 130, 27);
    * @param rbgInt - The RBG Integer
    */
-  private getRgbString(rbgInt: number | string): string {
+  private getRgbString(rbgInt: number): string {
     const red = (rbgInt >> 16) & 255;
     const green = (rbgInt >> 8) & 255;
     const blue = rbgInt & 255;
