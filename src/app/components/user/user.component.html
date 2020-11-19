@@ -1,34 +1,19 @@
-<div *ngIf="showDetail" class="detail" [ngClass]="classes">
+<div [@detail]="state" class="detail">
     <button (click)="toggle()" mat-button class="on-bg-alt">
         <app-close></app-close>
     </button>
 
     <section class="roles">
-        <article>
-            <h3>Admin</h3>
-        </article>
-        <!-- 
-        <article>
-            <h3>Mod</h3>
-        </article>
-
-        <article>
-            <h3>Legendary</h3>
-        </article> -->
-
-        <article>
-            <h3>Epic Memer</h3>
-        </article>
-
-        <article>
-            <h3>Lorem ipsum dolor sit amet consectetur</h3>
+        <article *ngFor="let r of response" [style.borderColor]="r.color">
+            <div [style.background]="r.color"></div>
+            <h3>{{ r.name }}</h3>
         </article>
     </section>
 
     <app-logout></app-logout>
 </div>
 
-<button (click)="toggle()" mat-button class="toggle on-card">
+<button (click)=" toggle()" mat-button class="toggle on-card">
     <div class="user">
         <img src="https://cdn.discordapp.com/avatars/539928835953524757/fa626df27e371d63c56ee3f4ad809e4c.png?size=2048">
         <h2>Mysterious_Penguin</h2>

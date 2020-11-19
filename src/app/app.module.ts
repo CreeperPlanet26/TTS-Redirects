@@ -22,8 +22,8 @@ import { PatchNotesComponent } from './assets/icons/patch-notes/patch-notes.comp
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DashboardNavComponent } from './components/nav/dashboard-nav/dashboard-nav.component';
 import { UserComponent } from './components/user/user.component';
-import { AnimationService } from './util/animation/animation.service';
 import { LogoutComponent } from './components/buttons/logout/logout.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { LogoutComponent } from './components/buttons/logout/logout.component';
     PatchNotesComponent,
     DashboardNavComponent,
     UserComponent,
-    LogoutComponent
+    LogoutComponent,
   ],
   imports: [
     CommonModule,
@@ -51,8 +51,9 @@ import { LogoutComponent } from './components/buttons/logout/logout.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule
   ],
-  providers: [NavService, AnimationService],
-  bootstrap: [AppComponent]
+  providers: [NavService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

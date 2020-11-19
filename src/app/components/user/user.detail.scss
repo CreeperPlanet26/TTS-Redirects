@@ -6,7 +6,7 @@
     position: absolute;
     z-index: 69;
     width: 15rem;
-    height: 13rem;
+    height: 14rem;
     margin: -14.5rem auto 0 auto;
     background: $bg-alt;
     border: 1px solid $border;
@@ -15,34 +15,56 @@
 }
 
 .on-bg-alt {
-    margin: 1rem 0.3rem 0 auto;
+    margin: 0.5rem 0.3rem 0 auto;
 }
 
 .roles {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: -2rem;
+    margin-left: 1rem;
+    height: 7.5rem;
+    overflow: auto;
 
-    margin: auto;
-    // margin-left: auto;
-    margin-top: -1.5rem;
+    &::-webkit-scrollbar {
+        @include laptop {
+            width: 0.3rem;
+        }
+    }
 
     article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: 2px solid #da004e;
-        border-radius: 10px;
+        border-radius: 14px;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+        padding: 0.2rem 0.5rem;
 
         h3 {
-            width: 4rem;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: $semi-bold;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+            text-align: center;
+            max-width: 5rem;
+            margin-left: 0.2rem;
+            margin-top: 0;
+        }
+
+        div {
+            width: 1rem;
+            height: 1rem;
+            background: #da004e;
+            border-radius: 50%;
         }
     }
 }
 
 app-logout {
     margin: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
