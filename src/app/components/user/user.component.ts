@@ -8,9 +8,8 @@ import { UserAnimation } from './user.animation';
   animations: UserAnimation,
 })
 export class UserComponent {
-  public roles: { name: string; color: string; }[];
 
-  public response: { name: string; color: number | string; }[] = [
+  public roles: { name: string; color: number | string; }[] = [
     { name: 'Admin', color: 14286926 },
     { name: 'OG', color: 16744987 }, // 16744987
     { name: 'EPIC MEMER', color: 2588365 },
@@ -22,23 +21,20 @@ export class UserComponent {
 
   public isShowing = false;
   public get state(): string { return this.isShowing ? 'show' : 'remove'; }
-
-  public get class(): string { return this.roles.length > 3 ? 'less' : ''; }
+  public get class(): string { return this.roles.length <= 3 ? 'three' : ''; }
 
   constructor() {
-    this.setRoles();
-    console.log(this.response)
+    this.convertColors();
   }
 
   public toggle(): void {
     this.isShowing = !this.isShowing;
   }
 
-  private setRoles(): void {
-    for (const r of this.response)
-      r.color = this.getRgbString(<number>r.color);
+  private convertColors(): void {
+    for (const r of this.roles)
+      r.color = this.getHexString(<number>r.color);
   }
-
 
   /**
    * Takes an RBG Integer 16744987 and returns an RBG String rgb(255, 130, 27);
@@ -50,5 +46,13 @@ export class UserComponent {
     const blue = rbgInt & 255;
 
     return `rgb(${red}, ${green}, ${blue})`;
+  }
+
+  /**
+   * Takes a RBG Integer 16744987 and returns a Hex Code #ff821b;
+   * @param rbgInt - The RBG Integer
+   */
+  private getHexString(rbgInt: number): string {
+    return `#${rbgInt.toString(16).padStart(6, '0')}`;
   }
 }

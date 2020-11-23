@@ -38,7 +38,7 @@
         justify-content: center;
         align-items: center;
         border: 2px solid #da004e;
-        border-radius: 14px;
+        border-radius: 90px;
         margin-right: 0.5rem;
         margin-top: 0.5rem;
         padding: 0.2rem 0.5rem;
@@ -60,6 +60,24 @@
             height: 1rem;
             background: #da004e;
             border-radius: 50%;
+        }
+    }
+
+    &.three {
+        justify-content: center;
+        margin-left: 0;
+        margin-top: -2rem;
+        height: 9rem;
+
+        article {
+            padding: 0.2rem 0.7rem;
+            border: 2.2px solid #da004e;
+
+            h3 {
+                max-width: 5.5rem;
+                font-size: 0.8rem;
+                margin-left: 0.3rem;
+            }
         }
     }
 }
