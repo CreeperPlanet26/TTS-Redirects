@@ -1,12 +1,11 @@
 <app-dashboard-nav>
     <div class="content">
-        <audio src="https://lucas7yoshi.sfo2.cdn.digitaloceanspaces.com/tempogg.ogg.mp3" autoplay loop="true">
-            <embed src="https://lucas7yoshi.sfo2.cdn.digitaloceanspaces.com/tempogg.ogg.mp3" loop="true" width="180"
-                height="90" hidden="true" />
+        <audio [src]="music" autoplay loop="true">
+            <embed [src]="music" loop="true" width="180" height="90" hidden="true" />
         </audio>
 
         <h2>{{eventDate.toLocaleString()}}</h2>
-        <h2>{{countdown}}</h2>
+        <h2 [ngClass]='class'>{{countdown}}</h2>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.facere autem, earum laborum consectetur
             perferendis nobis nemvoluptas veritatis? Eaque velit inventore non quas vero!
