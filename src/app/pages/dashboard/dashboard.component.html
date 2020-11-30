@@ -3,9 +3,9 @@
         <audio [src]="music" autoplay loop="true">
             <embed [src]="music" loop="true" width="180" height="90" hidden="true" />
         </audio>
-
-        <h2>{{eventDate.toLocaleString()}}</h2>
-        <h2 [ngClass]="class">{{countdown}}</h2>
+        <h1 [ngClass]="class">{{ text }}</h1>
+        <h2 [ngClass]="class">{{ countdown }}</h2>
+        <h2>{{ eventDate.toLocaleString() }}</h2>
         <img *ngIf="canShowTilted"
             src="https://image-cdn.essentiallysports.com/wp-content/uploads/20200531155348/tilted-towers-768x433.jpg">
         <img *ngIf="canShowEpicGamesCountdown" src="https://img.kickdyn.com/21821/WAhznPMyGPpFYtzIuaiw/imgancnt.gif">

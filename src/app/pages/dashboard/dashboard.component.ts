@@ -13,13 +13,14 @@ const Music = {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+  public text: string;
   public music = Music.COMIC;
   // public eventDate = new Date('2020-12-01T21:00:00.000Z');
   // public endDate = new Date('2020-12-01T21:10:00.000Z');
-  public eventDate = new Date('2020-11-30T16:31:00.000Z');
-  public endDate = new Date('2020-11-30T16:32:00.000Z');
+  public eventDate = new Date(Date.now() + 5000);
+  public endDate = new Date(Date.now() + 10000);
   // public season5 = new Date('2020-12-02T09:00:00.000Z');
-  public season5 = new Date('2020-11-30T16:32:10.000Z');
+  public season5 = new Date(Date.now() + 15000);
 
   public countdown = 'Calculating...';
   public class = '';
@@ -62,6 +63,7 @@ export class DashboardComponent {
 
     // If there is 1 hour or less to event change music to the comic. Also make text orange.
     if (days === 0 && hours <= 1) {
+      this.text = 'He is near.';
       this.music = Music.COMIC;
       this.class = 'orange';
     }
@@ -71,11 +73,19 @@ export class DashboardComponent {
 
     // If the count down is over, write some text;
     if (msTillEvent <= 0) {
-      this.countdown = '!WARNING! The Devourer of Worlds is in Range';
+      this.text = '!WARNING! The Devourer of Worlds is in Range';
       this.class = 'red';
       this.music = Music.END;
       this.canShowEpicGamesCountdown = false;
       this.canShowTilted = false;
+
+      const days = Math.floor(msTillEndDate / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((msTillEndDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((msTillEndDate % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((msTillEndDate % (1000 * 60)) / 1000);
+      const milliseconds = Math.floor((msTillEndDate % (1000)) / 1000);
+      this.countdown = `${days}D ${hours}H ${minutes}M ${seconds}S ${milliseconds}MS`;
+
 
     }
 
@@ -92,16 +102,15 @@ export class DashboardComponent {
       const seconds = Math.floor((msTillSeason5 % (1000 * 60)) / 1000);
       const milliseconds = Math.floor((msTillSeason5 % (1000)) / 1000);
       this.countdown = `${days}D ${hours}H ${minutes}M ${seconds}S ${milliseconds}MS`;
-
     }
 
     if (msTillSeason5 <= 0) {
-
       this.music = Music.FESTIVE;
-      this.countdown = 'Welcome to Season 15! Tilted Towers has Returned! (I hope) POGGERS!';
+      this.text = 'Welcome to Season 15! Tilted Towers has Returned! (I hope) POGGERS!';
       this.class = 'blue';
       this.canShowEpicGamesCountdown = false;
       this.canShowTilted = true;
+      this.countdown = '';
     }
 
   }
