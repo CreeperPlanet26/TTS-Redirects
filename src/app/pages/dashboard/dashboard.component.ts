@@ -17,10 +17,10 @@ export class DashboardComponent {
   public music = Music.COMIC;
   // public eventDate = new Date('2020-12-01T21:00:00.000Z');
   // public endDate = new Date('2020-12-01T21:10:00.000Z');
-  public eventDate = new Date(Date.now() + 5000);
-  public endDate = new Date(Date.now() + 10000);
+  public eventDate = new Date(Date.now() + 8000);
+  public endDate = new Date(Date.now() + 13000);
   // public season5 = new Date('2020-12-02T09:00:00.000Z');
-  public season5 = new Date(Date.now() + 15000);
+  public season5 = new Date(Date.now() + 18000);
 
   public countdown = 'Calculating...';
   public class = '';
@@ -90,7 +90,7 @@ export class DashboardComponent {
     }
 
     if (msTillEndDate <= 0) {
-      this.countdown = 'To Be Continued...';
+      this.text = 'To Be Continued...';
       this.class = 'green';
       this.music = Music.END;
       this.canShowEpicGamesCountdown = false;
