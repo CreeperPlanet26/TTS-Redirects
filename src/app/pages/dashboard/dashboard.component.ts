@@ -15,12 +15,9 @@ const Music = {
 export class DashboardComponent {
   public text: string;
   public music = Music.COMIC;
-  // public eventDate = new Date('2020-12-01T21:00:00.000Z');
-  // public endDate = new Date('2020-12-01T21:10:00.000Z');
-  public eventDate = new Date(Date.now() + 8000);
-  public endDate = new Date(Date.now() + 13000);
-  // public season5 = new Date('2020-12-02T09:00:00.000Z');
-  public season5 = new Date(Date.now() + 18000);
+  public eventDate = new Date('2020-12-01T21:00:00.000Z');
+  public endDate = new Date('2020-12-01T21:10:00.000Z');
+  public season5 = new Date('2020-12-02T09:00:00.000Z');
 
   public countdown = 'Calculating...';
   public class = '';
@@ -30,7 +27,9 @@ export class DashboardComponent {
   constructor(private navBarService: NavService) {
     this.calculate();
     this.startUpdating();
-    console.log(this.eventDate.toLocaleString());
+    console.log(`Event Starts At: ${this.eventDate.toLocaleString()}
+Event Ends At: ${this.endDate.toLocaleString()}
+Season 15 Downtime Starts At: ${this.season5.toLocaleString()}`);
   }
 
 
@@ -61,8 +60,8 @@ export class DashboardComponent {
     const seconds = Math.floor((msTillEvent % (1000 * 60)) / 1000);
     const milliseconds = Math.floor((msTillEvent % (1000)) / 1000);
 
-    // If there is 1 hour or less to event change music to the comic. Also make text orange.
-    if (days === 0 && hours <= 1) {
+    // If there is 24 hour or less to event change music to the comic. Also make text orange.
+    if (days === 0 && hours <= 20) {
       this.text = 'He is near.';
       this.music = Music.COMIC;
       this.class = 'orange';
