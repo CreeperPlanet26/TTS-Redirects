@@ -5,7 +5,10 @@
         </audio>
 
         <h2>{{eventDate.toLocaleString()}}</h2>
-        <h2 [ngClass]='class'>{{countdown}}</h2>
+        <h2 [ngClass]="class">{{countdown}}</h2>
+        <img *ngIf="canShowTilted"
+            src="https://image-cdn.essentiallysports.com/wp-content/uploads/20200531155348/tilted-towers-768x433.jpg">
+        <img src="https://img.kickdyn.com/21821/WAhznPMyGPpFYtzIuaiw/imgancnt.gif">
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.facere autem, earum laborum consectetur
             perferendis nobis nemvoluptas veritatis? Eaque velit inventore non quas vero!
