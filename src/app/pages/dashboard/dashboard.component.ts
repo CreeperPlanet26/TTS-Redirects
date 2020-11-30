@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavService } from 'src/app/components/nav/nav.service';
 
 const Music = {
@@ -12,8 +12,8 @@ const Music = {
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
-  public music = Music.COMIC;
+export class DashboardComponent implements OnInit {
+  public music;
   // public eventDate = new Date('2020-12-01T21:00:00.000Z');
   // public endDate = new Date('2020-12-01T21:10:00.000Z');
   public eventDate = new Date('2020-11-01T21:00:00.000Z');
@@ -25,7 +25,10 @@ export class DashboardComponent {
   public class = '';
   public canShowTilted = false;
 
-  constructor(private navBarService: NavService) {
+  constructor(private navBarService: NavService) { }
+
+  public ngOnInit(): void {
+    this.music = Music.COMIC;
     this.startUpdating();
   }
 
