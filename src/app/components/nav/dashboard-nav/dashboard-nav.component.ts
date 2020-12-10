@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { User } from 'src/app/http/user/user.type';
 import { NavService } from '../nav.service';
 
 @Component({
@@ -7,10 +8,10 @@ import { NavService } from '../nav.service';
   styleUrls: ['./dashboard-nav.component.scss',]
 })
 export class DashboardNavComponent {
+  @Input()
+  public user: User;
 
-  constructor(public navBarService: NavService) {
-    // navBarService.setClass();
-  }
+  constructor(public navBarService: NavService) { }
 
   public toggleDrawer(): void {
     this.navBarService.drawer.toggle();

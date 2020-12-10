@@ -1,4 +1,4 @@
-<app-nav-bar>
+<app-nav-bar [user]="user">
     <nav>
         <button routerLink="/" class="h1" mat-button>TTS</button>
         <button (click)="toggleDrawer()" class="hamburger" mat-button>
@@ -26,7 +26,9 @@
                 </div>
             </section>
 
-            <app-user></app-user>
+
+            <app-user *ngIf="user" [user]="user"></app-user>
+            <app-login *ngIf="!user"></app-login>
 
         </div>
 

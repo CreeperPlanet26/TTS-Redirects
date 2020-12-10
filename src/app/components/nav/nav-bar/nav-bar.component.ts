@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
+import { User } from 'src/app/http/user/user.type';
 import { NavService } from '../nav.service';
 
 @Component({
@@ -10,6 +11,9 @@ import { NavService } from '../nav.service';
 export class NavBarComponent implements AfterViewInit {
   @ViewChild('drawer')
   private drawerRef: MatDrawer;
+
+  @Input()
+  public user: User
 
   constructor(public navBarService: NavService) { }
 

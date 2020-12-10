@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Content, Role } from 'src/app/http/content/content.type';
+import { HttpService } from 'src/app/http/http.service';
+import { User } from 'src/app/http/user/user.type';
 import { UserAnimation } from './user.animation';
 
 @Component({
@@ -8,23 +11,20 @@ import { UserAnimation } from './user.animation';
   animations: UserAnimation,
 })
 export class UserComponent {
+  @Input()
+  public user: User;
 
-  public roles: { name: string; color: number | string; }[] = [
-    { name: 'Admin', color: 14286926 },
-    { name: 'OG', color: 16744987 }, // 16744987
-    { name: 'EPIC MEMER', color: 2588365 },
-    { name: 'Invited Someone', color: 1659008 },
-    { name: 'Xbox', color: 2474073 },
-    { name: '60 FPS', color: 13700 },
-    { name: 'MYTHIC', color: 16770560 },
-  ];
+  public roles: Role[] = [];
 
   public isShowing = false;
   public get state(): string { return this.isShowing ? 'show' : 'remove'; }
   public get class(): string { return this.roles.length <= 3 ? 'three' : ''; }
 
-  constructor() {
-    this.convertColors();
+  constructor(private _http: HttpService) {
+    this._http.content.get().then(c => {
+      this.roles = c.members.find(m => m.id === this.user.id).roles;
+      this.convertColors();
+    });
   }
 
   public toggle(): void {
@@ -33,6 +33,7 @@ export class UserComponent {
 
   private convertColors(): void {
     for (const r of this.roles)
+      //@ts-ignore
       r.color = this.getHexString(<number>r.color);
   }
 
