@@ -14,8 +14,7 @@ export class UserService {
   constructor(private _http: HttpClient) { }
 
   public async getMe(): Promise<User> {
-    //@ts-ignore
-    return this._http.get<User>(Endpoints.ME, { withCredentials: true, observe: 'response' }).toPromise();
+    return await this._http.get<User>(Endpoints.ME, { withCredentials: true, observe: 'body' }).toPromise();
   }
 
 
