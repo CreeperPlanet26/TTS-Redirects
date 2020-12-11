@@ -1,6 +1,6 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import axios from 'axios';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from './user.type';
 
@@ -14,7 +14,9 @@ export class UserService {
   constructor(private _http: HttpClient) { }
 
   public async getMe(): Promise<User> {
-    return await this._http.get<User>(Endpoints.ME, { withCredentials: true, observe: 'body' }).toPromise();
+    // return await this._http.get<User>(Endpoints.ME, { withCredentials: true }).toPromise();
+    const user = await axios.get<User>(Endpoints.ME, { withCredentials: true });
+    return user.data;
   }
 
 
