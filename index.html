@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script>
+
+        const noHttp = location.href.split('https://').join('');
+        let path = noHttp.split('/');
+        path.shift();
+        path = path.join('/');
+
+
+        if (path) location.replace(`https://tts-api-prod.herokuapp.com/${path}`);
+        else location.replace("https://tts-api-prod.herokuapp.com/");
+
+    </script>
+</head>
+
+</html>
